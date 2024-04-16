@@ -7,6 +7,7 @@ module.exports = {
     '@electron-toolkit/eslint-config-prettier'
   ],
   rules: {
+    "curly": "error",
     "typescript-eslint/no-unused-vars": "off",
     "typescript-eslint/explicit-function-return-type": "off",
   }
