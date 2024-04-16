@@ -13,7 +13,8 @@ function createWindow(): void {
     ...(process.platform === "linux" ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, "../preload/index.js"),
-      sandbox: false
+      sandbox: true, // process sandboxing: 시스템 자원 접근 권한만 사용하도록 제한
+      contextIsolation: true // context isolation: 렌더러 프로세스에서 노출된 전역 객체를 제한
     }
   });
 
