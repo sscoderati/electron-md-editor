@@ -11,6 +11,13 @@ function createWindow(): void {
     show: false,
     autoHideMenuBar: true,
     ...(process.platform === "linux" ? { icon } : {}),
+    center: true,
+    title: "MDEditor made using Electron",
+    frame: false,
+    vibrancy: "under-window",
+    visualEffectState: "active",
+    titleBarStyle: "hidden",
+    trafficLightPosition: { x: 15, y: 10 },
     webPreferences: {
       preload: join(__dirname, "../preload/index.js"),
       sandbox: true, // process sandboxing: 시스템 자원 접근 권한만 사용하도록 제한
