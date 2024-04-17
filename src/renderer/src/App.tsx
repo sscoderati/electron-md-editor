@@ -1,8 +1,11 @@
+import { ContentLayout, RootLayout, SideBarLayout } from "./components";
+
 function App() {
   return (
-    <div className={"flex h-full items-center justify-center"}>
-      <span className={"text-sky-400 font-bold text-4xl"}>Hello from Electron</span>
-    </div>
+    <RootLayout>
+      <SideBarLayout className={"p-2 border-red-500 border-4"}>SideBar</SideBarLayout>
+      <ContentLayout className={"p-2 border-blue-500 border-4"}>Content</ContentLayout>
+    </RootLayout>
   );
 }
 
