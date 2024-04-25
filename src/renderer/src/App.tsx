@@ -1,11 +1,16 @@
-import { ContentLayout, RootLayout, SideBarLayout } from "./components";
+import { ContentLayout, RootLayout, SideBarLayout, DraggableTopBar } from "./components";
 
 function App() {
   return (
-    <RootLayout>
-      <SideBarLayout className={"p-2 border-red-500 border-4"}>SideBar</SideBarLayout>
-      <ContentLayout className={"p-2 border-blue-500 border-4"}>Content</ContentLayout>
-    </RootLayout>
+    <>
+      <DraggableTopBar />
+      <RootLayout>
+        <SideBarLayout className={"p-2"}>SideBar</SideBarLayout>
+        <ContentLayout className={"border-l bg-zinc-900/50 border-l-white/20"}>
+          Content
+        </ContentLayout>
+      </RootLayout>
+    </>
   );
 }
 
